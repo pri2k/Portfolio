@@ -1,0 +1,39 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ThemeProvider, CssBaseline, Container } from '@mui/material';
+
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import About from './pages/About';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+import Experience from './pages/Experience'; 
+
+import theme from './theme';
+
+function App() {
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Container maxWidth="false" disableGutters sx={{ px: { xs: 2, sm: 4, md: 6 } }}>
+                <Hero />
+                <Contact/>
+              </Container>
+            }
+          />
+          <Route path="/about" element={<About/>} />
+          <Route path="/experience" element={<Experience />} />
+        </Routes>
+        {/* <Footer /> */}
+      </Router>
+    </ThemeProvider>
+  );
+}
+
+export default App;
