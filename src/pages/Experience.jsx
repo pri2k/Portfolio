@@ -1,12 +1,7 @@
 import React from 'react';
-import {
-  Container,
-  Typography,
-  Card,
-  Stack,
-  Link,
-  Box
-} from '@mui/material';
+import { Box, Container, Typography, Stack, Card, Link } from '@mui/material';
+import { motion } from 'framer-motion'; // Needed for hover animation
+
 
 const experiences = [
   {
@@ -28,15 +23,8 @@ const experiences = [
 • Computed BLEU scores to evaluate translation quality and analyzed comparative model performance.
 • Co-authoring a research paper on low-resource language translation using PyTorch, TensorFlow, and Keras.`,
   },
-  {
-    title: "Freelance Web Developer",
-    dates: "Jun 2023 – Aug 2023",
-    organization: "Independent Project",
-    url: "https://aws.amazon.com",
-    description: `• Collaborated with another freelancer to design and deploy a customized website for a prestigious educational institution’s staff.
-• Optimized enquiry and admission processes, reducing processing time by 70%.
-• Integrated data linkage strategies and report generation, improving operational efficiency by 85%.`,
-  },
+  
+  
   {
     title: "Mentee",
     dates: "Nov 2023 – Present",
@@ -53,6 +41,7 @@ const experiences = [
     description: `• Wrote and performed original stage plays, musical compositions, and skits for college-wide cultural festivals.
 • Co-directed student productions, contributing to script development, stage design, and performance execution.`,
   },
+
   {
     title: "Mentee – Code; Without Barriers",
     dates: "Feb 2024 – Jun 2024",
@@ -63,6 +52,16 @@ const experiences = [
 • Participated in exclusive technical sessions, hands-on labs, and career development workshops focused on inclusive innovation and industry readiness.
 • Collaborated with a cohort of talented mentees on real-world projects and learned best practices in professional communication and development workflows.`,
   },
+  
+  {
+    title: "Freelance Web Developer",
+    dates: "Jun 2023 – Aug 2023",
+    organization: "Independent Project",
+    url: "https://aws.amazon.com",
+    description: `• Collaborated with another freelancer to design and deploy a customized website for a prestigious educational institution’s staff.
+• Optimized enquiry and admission processes, reducing processing time by 70%.
+• Integrated data linkage strategies and report generation, improving operational efficiency by 85%.`,
+  },
 ];
 
 const Experience = () => {
@@ -71,43 +70,76 @@ const Experience = () => {
       id="experience"
       sx={{
         bgcolor: "transparent",
-        py: { xs: 8, md: 10 },
+        // More padding on larger screens to push down from navbar
+        pt: { xs: 8, sm: 10, md: 14 },
+        pb: { xs: 8, md: 10 },
       }}
     >
       <Container maxWidth="md">
-        <Typography variant="h5" gutterBottom sx={{ textTransform: 'uppercase', fontWeight: 600 }}>
-          Experience
-        </Typography>
+        <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+          <Typography
+            variant="h4"
+            gutterBottom
+            sx={{
+              textTransform: 'uppercase',
+              fontWeight: 700,
+              letterSpacing: 1,
+              mb: 4,
+              borderBottom: "2px solid rgba(255,255,255,0.1)",
+              pb: 1,
+              width: "fit-content",
+            }}
+          >
+            Experience
+          </Typography>
+        </Box>
 
         <Stack spacing={4}>
           {experiences.map((exp, i) => (
-            <Card
-              key={i}
-              sx={{
-                bgcolor: "rgba(100, 0, 0, 0.08)", // slightly darker than baby pink
-                border: "1px solid rgba(255, 255, 255, 0.2)", // subtle outline
-                boxShadow: "0 4px 12px rgba(0, 0, 0, 0.15)", // gentle elevation
-                p: { xs: 2, md: 3 },
-                borderRadius: 3,
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              transition={{
+                type: "spring",
+                stiffness: 400,
+                damping: 40,
+                mass: 1
               }}
-              elevation={0}
             >
-              <Typography variant="subtitle1" gutterBottom>
-                <strong>{exp.title}</strong> ({exp.dates}) •{" "}
-                <Link
-                  href={exp.url}
-                  target="_blank"
-                  rel="noopener"
-                  underline="hover"
-                  color="primary"
+              <Card
+                sx={{
+                  bgcolor: "rgba(100, 0, 0, 0.08)", 
+                  border: "1px solid rgba(255, 255, 255, 0.2)",
+                  boxShadow: "0 4px 12px rgba(0, 0, 0, 0.15)",
+                  p: { xs: 2, md: 3 },
+                  borderRadius: 3,
+                  transition: 'transform 0.3s ease-in-out',
+                }}
+                elevation={0}
+              >
+                <Typography variant="subtitle1" gutterBottom>
+                  <strong>{exp.title}</strong> ({exp.dates}) •{" "}
+                  <Link
+                    href={exp.url}
+                    target="_blank"
+                    rel="noopener"
+                    underline="hover"
+                    color="primary"
+                  >
+                    {exp.organization}
+                  </Link>
+                </Typography>
+                <Typography
+                  variant="body2"
+                  sx={{
+                    whiteSpace: 'pre-line',
+                    color: "text.secondary",
+                    lineHeight: 1.6,
+                  }}
                 >
-                  {exp.organization}
-                </Link>
-              </Typography>
-              <Typography variant="body2" sx={{ whiteSpace: 'pre-line', color: "text.secondary", lineHeight: 1.6 }}>
-                {exp.description}
-              </Typography>
-            </Card>
+                  {exp.description}
+                </Typography>
+              </Card>
+            </motion.div>
           ))}
         </Stack>
       </Container>
