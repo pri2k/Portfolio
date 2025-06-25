@@ -8,6 +8,7 @@ import About from './pages/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Experience from './pages/Experience'; 
+import TechStack from './components/TechStack';
 
 import theme from './theme';
 
@@ -23,6 +24,7 @@ function App() {
             element={
               <Container maxWidth="false" disableGutters sx={{ px: { xs: 2, sm: 4, md: 6 } }}>
                 <Hero />
+                <TechStack />
                 <Contact/>
               </Container>
             }

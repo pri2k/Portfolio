@@ -2,13 +2,15 @@
 import { useState, useEffect } from 'react';
 import { Container, Typography, Box, Stack, IconButton } from '@mui/material';
 
+
 const roles = [
   { text: 'Web Developer', color: '#D81B60' },
-  { text: 'Musician', color: '#7B1FA2' },
+  { text: 'Musician', color: '#D81B60' },
   { text: 'Student Researcher', color: '#D81B60' },
-  { text: 'Writer', color: '#9C27B0' },
-  { text: 'Competitive Programmer', color: '#8E24AA' },
+  { text: 'Writer', color: '#D81B60' },
+  { text: 'Competitive Programmer', color: '#D81B60' },
 ];
+
 
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -50,10 +52,6 @@ const Hero = () => {
             {currentRole.text}
           </span>
         </Typography>
-
-        {/* <Typography variant="subtitle1" sx={{ mt: 2 }}>
-          Web Dev • ML Enthusiast • DSA Lover
-        </Typography> */}
       </Container>
     </Box>
   );
