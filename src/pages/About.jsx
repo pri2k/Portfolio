@@ -70,7 +70,7 @@ const About = () => {
           <Card
             sx={{
               flex: 1,
-              bgcolor: "rgba(247, 221, 230, 0.6)",
+              bgcolor: "rgba(100, 0, 0, 0.08)",
               backdropFilter: "blur(2px)",
               p: { xs: 2, md: 4 },
               borderRadius: 3,

@@ -5,13 +5,27 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: white;
+  position: relative;
+  overflow-x: hidden;
+  z-index: 1;
+}
 
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   background-image: url('images/background.png'); 
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  color: white;
+  filter: blur(2px); /* 💡 adjust as needed */
+  z-index: -1;
+  pointer-events: none;
 }
 
 code {

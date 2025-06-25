@@ -1,6 +1,7 @@
 // Hero.jsx
 import { useState, useEffect } from 'react';
 import { Container, Typography, Box, Stack, IconButton } from '@mui/material';
+import './Hero.css';
 
 
 const roles = [
@@ -18,7 +19,7 @@ const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % roles.length);
-    }, 1200);
+    }, 1800);
     return () => clearInterval(interval);
   }, []);
 
@@ -40,18 +41,22 @@ const Hero = () => {
       }}
     >
       <Container maxWidth="md" sx={{ textAlign: 'center' }}>
-        <Typography variant="h3" gutterBottom>
+        <Typography variant="h3" gutterBottom fontWeight="450" className="slide-in-elliptic-top-fwd">
           Hi! I'm Priya
         </Typography>
-         <Typography variant="h4" gutterBottom>
-          I am a student at IIITM Gwalior
+
+        <Typography variant="h4" gutterBottom className="car-entry">
+          I am a student at IIIT Gwalior
         </Typography>
-        <Typography variant="h4" gutterBottom>
+
+        <Typography variant="h4" gutterBottom className="scale-in-center">
           and a{' '}
           <span style={{ color: currentRole.color, fontWeight: 'bold' }}>
             {currentRole.text}
           </span>
         </Typography>
+
+
       </Container>
     </Box>
   );

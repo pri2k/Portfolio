@@ -117,7 +117,7 @@ const TechStack = () => {
                   sx={{
                     p: 1.5, // ⬅️ smaller padding
                     borderRadius: '16px',
-                    backgroundColor: '#FFE6F3',
+                    backgroundColor: '#FFF2F2',
                     transform: hovered ? 'scale(1.05)' : 'scale(1)',
                     transition: 'transform 0.3s ease',
                   }}
