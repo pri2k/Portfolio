@@ -2,11 +2,21 @@
 import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 900,
+      lg: 1200,
+      xl: 1536,
+      xxl: 1800, 
+    },
+  },
   typography: {
     fontFamily: 'Poppins, sans-serif',
   },
   palette: {
-    mode: 'light', // or 'dark'
+    mode: 'light',
     primary: {
       main: '#D81B60',
     },
@@ -14,7 +24,7 @@ const theme = createTheme({
       main: '#1E88E5',
     },
     background: {
-      default: '#FFF0F5', // baby pink
+      default: '#f7dde6', // baby pink
     },
     text: {
       primary: '#000000',
