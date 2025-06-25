@@ -23,7 +23,7 @@ body::before {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  filter: blur(2px); /* 💡 adjust as needed */
+  filter: blur(5px); 
   z-index: -1;
   pointer-events: none;
 }

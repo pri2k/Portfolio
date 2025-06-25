@@ -6,10 +6,10 @@ import './Hero.css';
 
 const roles = [
   { text: 'Web Developer', color: '#D81B60' },
-  { text: 'Musician', color: '#D81B60' },
   { text: 'Student Researcher', color: '#D81B60' },
   { text: 'Writer', color: '#D81B60' },
   { text: 'Competitive Programmer', color: '#D81B60' },
+  { text: 'Musician', color: '#D81B60' },
 ];
 
 
@@ -19,7 +19,7 @@ const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % roles.length);
-    }, 1800);
+    }, 2000);
     return () => clearInterval(interval);
   }, []);
 
@@ -49,7 +49,7 @@ const Hero = () => {
           I am a student at IIIT Gwalior
         </Typography>
 
-        <Typography variant="h4" gutterBottom className="scale-in-center">
+        <Typography variant="h4" gutterBottom className="car-entry">
           and a{' '}
           <span style={{ color: currentRole.color, fontWeight: 'bold' }}>
             {currentRole.text}

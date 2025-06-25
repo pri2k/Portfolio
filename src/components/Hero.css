@@ -71,7 +71,7 @@
 /* Hero.css */
 
 .car-entry {
-  animation: car-entry 0.8s cubic-bezier(0.6, 0, 0.3, 1.4) 0.8s both;
+  animation: car-entry 0.8s cubic-bezier(0.6, 0, 0.3, 1.4) 1.0s both;
 }
 
 /* "Car-like" entry animation */
