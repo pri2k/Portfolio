@@ -18,53 +18,65 @@ import {
 import { MdCode, MdFunctions } from 'react-icons/md';
 
 const techs = [
-  // Languages
+  { name: 'Java', icon: <FaJava color="#007396" /> },
+  { name: 'Python', icon: <SiPython color="#3776ab" /> },
+  { name: 'React', icon: <SiReact color="#61dafb" /> },
+  { name: 'PyTorch', icon: <SiPytorch color="#EE4C2C" /> },
+  { name: 'Pandas', icon: <SiPandas color="#150458" /> },
+  { name: 'NumPy', icon: <SiNumpy color="#013243" /> },
+  { name: 'Scikit-Learn', icon: <SiScikitlearn color="#F7931E" /> },
+  { name: 'AWS', icon: <SiAmazon color="#FF9900" /> },
+  { name: 'GCP', icon: <SiGooglecloud color="#4285F4" /> },
+  { name: 'Google APIs', icon: <FaCloud color="#4285F4" /> },
+  { name: 'SQL', icon: <SiMysql color="#00758F" /> },
+  { name: 'Streamlit', icon: <SiStreamlit color="#FF4B4B" /> },
+  { name: 'Django', icon: <SiDjango color="#092E20" /> },
+  { name: 'Material-UI', icon: <SiMui color="#007fff" /> },
   { name: 'HTML', icon: <SiHtml5 color="#e34f26" /> },
   { name: 'CSS', icon: <SiCss3 color="#1572B6" /> },
-  { name: 'Python', icon: <SiPython color="#3776ab" /> },
-  { name: 'Java', icon: <FaJava color="#007396" /> },
+  { name: 'GitHub', icon: <SiGithub color="#000" /> },
+  
+  
   { name: 'C/C++', icon: <SiCplusplus color="#00599C" /> },
-  { name: 'SQL', icon: <SiMysql color="#00758F" /> },
+  
   { name: 'Dart', icon: <SiDart color="#0175C2" /> },
   { name: 'JavaScript', icon: <SiJavascript color="#f7df1e" /> },
 
   // Web / Backend Frameworks
-  { name: 'React', icon: <SiReact color="#61dafb" /> },
+  
   { name: 'Node.js', icon: <SiNodedotjs color="#3c873a" /> },
-  { name: 'Streamlit', icon: <SiStreamlit color="#FF4B4B" /> },
+  
   { name: 'Flask', icon: <SiFlask color="#000000" /> },
-  { name: 'Django', icon: <SiDjango color="#092E20" /> },
+  
   { name: 'FastAPI', icon: <SiFastapi color="#009688" /> },
 
   // UI/UX
   { name: 'Figma', icon: <SiFigma color="#F24E1E" /> },
   { name: 'Canva', icon: <SiCanva color="#00C4CC" /> },
-  { name: 'Material-UI', icon: <SiMui color="#007fff" /> },
+  
   { name: 'Bootstrap', icon: <SiBootstrap color="#7952B3" /> },
 
   // AI / ML / Data Science
-  { name: 'PyTorch', icon: <SiPytorch color="#EE4C2C" /> },
+  
   { name: 'TensorFlow', icon: <SiTensorflow color="#FF6F00" /> },
-  { name: 'Scikit-Learn', icon: <SiScikitlearn color="#F7931E" /> },
-  { name: 'Pandas', icon: <SiPandas color="#150458" /> },
-  { name: 'NumPy', icon: <SiNumpy color="#013243" /> },
+  
+  { name: 'EC2', icon: <FaCloud color="#f90" /> },
   { name: 'Plotly', icon: <SiPlotly color="#3F4F75" /> },
   { name: 'Matlab', icon: <MdFunctions color="#E2231A" /> },
   { name: 'LangGraph', icon: <MdCode color="#ccc" /> },
 
   // DevOps
   { name: 'Git', icon: <SiGit color="#F05032" /> },
-  { name: 'GitHub', icon: <SiGithub color="#000" /> },
+  
   { name: 'Docker', icon: <SiDocker color="#2496ED" /> },
 
   // Cloud
-  { name: 'AWS', icon: <SiAmazon color="#FF9900" /> },
-  { name: 'GCP', icon: <SiGooglecloud color="#4285F4" /> },
-  { name: 'Google APIs', icon: <FaCloud color="#4285F4" /> },
+  
+  
   { name: 'Load Balancer', icon: <FaTools color="#999" /> },
   { name: 'Elastic Beanstalk', icon: <FaTools color="#999" /> },
   { name: 'S3', icon: <SiAmazon color="#FF9900" /> }, // fallback using AWS
-  { name: 'EC2', icon: <FaCloud color="#f90" /> }
+  
 ];
 
 const TechStack = () => {
@@ -87,12 +99,12 @@ const TechStack = () => {
       )}
 
       <Typography
-        variant="h5"
+        variant="h4"
         gutterBottom
-        fontWeight="bold"
-        sx={{ position: 'relative', zIndex: 10 }}
+        fontWeight="450"
+        sx={{ position: 'relative', zIndex: 10 , textAlign: 'center', mb: 4}}
       >
-        🚀 Tech Stack
+          Tech I have worked with
       </Typography>
 
       <motion.div

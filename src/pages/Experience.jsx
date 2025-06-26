@@ -30,16 +30,16 @@ const experiences = [
     dates: "Nov 2023 – Present",
     organization: "Codess.Cafe",
     url: "https://www.codess.cafe",
-    description: `• Mentored under experienced developers to enhance full-stack development skills and software engineering principles.
-• Actively participated in code reviews, peer discussions, and collaborative open-source projects.`,
+    description: `• Mentored by Drishty Ganatra to enhance my problem solving and development skills.
+    • Was selected from a pool of 800+ applicants for this mentorship program.
+• Actively participated in meets and peer discussions and actively helped the rest of the community.`,
   },
   {
-    title: "Actor / Musician / Script Writer",
+    title: "Actor | Musician | Script Writer",
     dates: "Aug 2023 – Present",
     organization: "Manchtantra, IIITM",
     url: "https://www.iiitm.ac.in",
-    description: `• Wrote and performed original stage plays, musical compositions, and skits for college-wide cultural festivals.
-• Co-directed student productions, contributing to script development, stage design, and performance execution.`,
+    description: `• Wrote and performed original stage plays and nukkad-nataks, played the harmonium and helped in direction of the plays for college and inter-college cultural festivals, Independence Day celebrations, and other events.`,
   },
 
   {
@@ -49,14 +49,13 @@ const experiences = [
     url: "https://www.microsoft.com/en-us/diversity/programs/code-without-barriers",
     description: `• Selected for Microsoft’s highly competitive 5-month diversity-focused mentorship program aimed at empowering women and non-binary individuals in tech across Asia-Pacific.
 • Received personal mentorship from experienced Microsoft engineers and product leaders in AI, software engineering, and cloud technologies.
-• Participated in exclusive technical sessions, hands-on labs, and career development workshops focused on inclusive innovation and industry readiness.
-• Collaborated with a cohort of talented mentees on real-world projects and learned best practices in professional communication and development workflows.`,
+• Participated in exclusive technical sessions and career development workshops focused on inclusive innovation and industry readiness.`,
   },
   
   {
-    title: "Freelance Web Developer",
+    title: "Web Developer",
     dates: "Jun 2023 – Aug 2023",
-    organization: "Independent Project",
+    organization: "Freelance",
     url: "https://aws.amazon.com",
     description: `• Collaborated with another freelancer to design and deploy a customized website for a prestigious educational institution’s staff.
 • Optimized enquiry and admission processes, reducing processing time by 70%.
@@ -132,8 +131,9 @@ const Experience = () => {
                   variant="body2"
                   sx={{
                     whiteSpace: 'pre-line',
-                    color: "text.secondary",
-                    lineHeight: 1.6,
+                    color: "black",
+                    lineHeight: 1.8,
+                    fontSize: { xs: '0.9rem', md: '1rem' },
                   }}
                 >
                   {exp.description}
