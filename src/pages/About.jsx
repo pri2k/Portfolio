@@ -90,7 +90,7 @@ const About = () => {
               <br /><br />
               Today, I'm a full-stack web developer, student researcher, and competitive programmer. I can build end-to-end products, train models, automate tedious workflows, and create conversational AI that actually works.
               <br /><br />
-              Whether you're working on research, building something cool, or just need someone who gets both front-end finesse and ML depth — feel free to connect!
+              Whether you're working on NLP, automation, chatbots, research or building something real — feel free to connect!
             </Typography>
           </Card>
         </Box>
