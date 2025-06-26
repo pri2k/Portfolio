@@ -107,7 +107,7 @@ const Experience = () => {
             >
               <Card
                 sx={{
-                  bgcolor: "rgba(100, 0, 0, 0.08)", 
+                  bgcolor: "rgba(255, 242, 242, 0.4)",
                   border: "1px solid rgba(255, 255, 255, 0.2)",
                   boxShadow: "0 4px 12px rgba(0, 0, 0, 0.15)",
                   p: { xs: 2, md: 3 },
