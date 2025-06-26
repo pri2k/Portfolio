@@ -5,9 +5,9 @@ import './Hero.css';
 
 
 const roles = [
+  { text: 'Writer', color: '#D81B60' },
   { text: 'Web Developer', color: '#D81B60' },
   { text: 'Student Researcher', color: '#D81B60' },
-  { text: 'Writer', color: '#D81B60' },
   { text: 'Competitive Programmer', color: '#D81B60' },
   { text: 'Musician', color: '#D81B60' },
 ];
