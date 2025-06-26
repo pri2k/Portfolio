@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { ThemeProvider, CssBaseline, Container } from '@mui/material';
 
 import Navbar from './components/Navbar';
@@ -16,26 +16,21 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <Container maxWidth="false" disableGutters sx={{ px: { xs: 2, sm: 4, md: 6 } }}>
-                <Hero />
-                <TechStack />
-                <Contact/>
-              </Container>
-            }
-          />
-          <Route path="/about" element={<About/>} />
-          <Route path="/experience" element={<Experience />} />
-        </Routes>
-        {/* <Footer /> */}
-      </Router>
+      <Navbar />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Container maxWidth="false" disableGutters sx={{ px: { xs: 2, sm: 4, md: 6 } }}>
+              <Hero />
+              <TechStack />
+              <Contact />
+            </Container>
+          }
+        />
+        <Route path="/about" element={<About />} />
+        <Route path="/experience" element={<Experience />} />
+      </Routes>
     </ThemeProvider>
   );
 }
-
-export default App;
