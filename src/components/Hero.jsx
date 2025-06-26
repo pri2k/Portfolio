@@ -28,7 +28,7 @@ const Hero = () => {
   return (
     <Box
       sx={{
-        backgroundImage: 'url("low-poly-grid-haikei.png")',
+        backgroundImage: 'url("pinkbg.png")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
