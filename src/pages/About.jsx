@@ -55,7 +55,7 @@ const About = () => {
             }}
           >
             <Avatar
-              src="/priya.png"
+              src={`${process.env.PUBLIC_URL}/priya.png`}
               alt="Priya Keshri"
               sx={{
                 width: { xs: 220, md: 300, lg: 340 },

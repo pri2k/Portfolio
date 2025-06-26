@@ -6,6 +6,9 @@ import reportWebVitals from './reportWebVitals';
 
 import { BrowserRouter } from 'react-router-dom'; 
 
+const redirectPath = sessionStorage.redirect;
+delete sessionStorage.redirect;
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -14,5 +17,9 @@ root.render(
     </BrowserRouter>
   </React.StrictMode>
 );
+
+if (redirectPath) {
+  window.history.replaceState(null, "", redirectPath);
+}
 
 reportWebVitals();
